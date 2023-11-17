@@ -24,7 +24,7 @@ id_dict = {
     "Admin Reports": admin_reports_id, "Assembly Schedule": schedule_id, "Development Information": dev_info_id, "Master Lists": master_lists_id, "nluf_id": nluf_id, "PI Target Lists": pi_target_lists_id, "Target Inventory": target_inventory_id, "Work From Home Info": wfh_info_id,
 }
 openai_api_key = "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"
-smartsheet_api_key = "7GJWGNGb7PaQ28tcSHYbwD1PkysZbzVHyv8dF"
+smartsheet_api_key = ""
 
 config_list = config_list_from_json("/home/abehl/ssagent/OAI_CONFIG_LIST.json")
 user = autogen.UserProxyAgent(
@@ -69,7 +69,7 @@ def setup_request(request:str) -> str:
     new_request = ("Rather than attempting to execute any code, please produce the code snippet that you would execute \
     to carry out the user's stated objectives, if you were capable of executing code. The user will execute the code \
     themselves, locally.")
-    request += "ENVIRONMENT VARIABLES:\n SMARTSHEET_API_KEY=7GJWGNGb7PaQ28tcSHYbwD1PkysZbzVHyv8dF\n"
+    request += "ENVIRONMENT VARIABLES:\n SMARTSHEET_API_KEY=\n"
     request += """"**FOR THE FILD ID TO NAME CORRELATOR ONLY**:\n\nCorrelate the following workspace IDs to their respective workspace names:\n\n'Admin Reports': 6756768966567812, 'Assembly Schedule': 1388770797873028, 'Development Information': 5590471268427652, 'Master Lists': 5416846410180484, 'nluf_id': 7890482492663684, 'PI Target Lists': 8931955019409284, 'Target Inventory': 277269500454788, 'Work From Home Info': 6928551149627268}"""
     new_request += f"""
     BEGIN NEW REQUEST:
