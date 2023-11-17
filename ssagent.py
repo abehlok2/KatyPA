@@ -9,7 +9,7 @@ import smartsheet
 
 openai_api_key = "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"
 print(openai_api_key)
-smartsheet_api_key = "7GJWGNGb7PaQ28tcSHYbwD1PkysZbzVHyv8dF"
+smartsheet_api_key = ""
 
 config_list = config_list_from_json("/home/abehl/ssagent/OAI_CONFIG_LIST.json")
 user = autogen.UserProxyAgent(
