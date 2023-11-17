@@ -9,7 +9,7 @@ import smartsheet
 
 openai_api_key = "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"
 print(openai_api_key)
-smartsheet_api_key = "7GJWGNGb7PaQ28tcSHYbwD1PkysZbzVHyv8dF"
+smartsheet_api_key = ""
 config_list = config_list_from_json("/home/abehl/ssagent/OAI_CONFIG_LIST.json")
 
 
@@ -45,7 +45,7 @@ smartsheet_agent = GPTAssistantAgent(
         -Always create a copy of a file before making modifications. 
         -NEVER use a placeholder such as "your-api-key-here" or anything like that where the smartsheet api key should be.
         -ALWAYS use the following string as the smartsheet api key:
-        "7GJWGNGb7PaQ28tcSHYbwD1PkysZbzVHyv8dF"
+        ""
         """
 )
 code_reviewer = autogen.AssistantAgent(
